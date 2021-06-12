@@ -1,0 +1,340 @@
+summary: "Model Serving API"
+description: "API is designed to train/deploy Machine Learning models"
+tags:
+  - prediction
+parameters:
+- in: "body"
+  name: "body"
+  description: "Accepts a input json with the features of the house prices dataset"
+  required: true
+  schema:
+    type: "json"
+    items:
+      type: "object"
+      properties:
+        Id:
+          type: "number"
+          format: "integer"
+          example : "1461"
+        MSSubClass:
+          type: "number"
+          format: "integer"
+          example : "20"
+        MSZoning:
+          type: "string"
+          format: "string"
+          example : "RH"
+        LotFrontage:
+          type: "number"
+          format: "float"
+          example: 80.0
+        LotArea:
+          type: "number"
+          format: "integer"
+          example: 11622
+        Street:
+          type: "string"
+          format: "string"
+          example: "Pave"
+        Alley:
+          type: "string"
+          format: "string"
+          example: "Pave"
+        LotShape:
+          type: "string"
+          format: "string"
+          example: "Reg"
+        LandContour:
+          type: "string"
+          format: "string"
+          example: "LvL"
+        Utilities:
+          type: "string"
+          format: "string"
+          example: "AllPub"
+        LotConfig:  
+          type: "string"
+          format: "string"
+          example: "Inside"
+        LandSlope:
+          type: "string"
+          format: "string"
+          example: "Gtl"
+        Neighborhood:
+          type: "string"
+          format: "string"
+          example: "Names"
+        Condition1:
+          type: "string"
+          format: "string"
+          example: "Feedr"
+        Condition2:
+          type: "string"
+          format: "string"
+          example: "Norm"
+        BldgType:
+          type: "string"
+          format: "string"
+          example: "1Fam"
+        HouseStyle:
+          type: "string"
+          format: "string"
+          example: "1Story"
+        OverallQual:
+          type: "number"
+          format: "integer"
+          example: 5
+        OverallCond:
+          type: "number"
+          format: "integer"
+          example: 6
+        YearBuilt:
+          type: "number"
+          format: "integer"
+          example: 1961
+        YearRemodAdd:
+          type: "number"
+          format: "integer"
+          example: 1961
+        RoofStyle:
+          type: "string"
+          format: "string"
+          example: "Gable"
+        RoofMatl:
+          type: "string"
+          format: "string"
+          example: "CompShg"
+        Exterior1st:
+          type: "string"
+          format: "string"
+          example: "VinylSd"
+        Exterior2nd:
+          type: "string"
+          format: "string"
+          example: "VinylSd"
+        MasVnrType:
+          type: "string"
+          format: "string"
+          example: "None"
+        MasVnrArea:
+          type: "number"
+          format: "float"
+          example: 0.0
+        ExterQual:
+          type: "string"
+          format: "string"
+          example: "TA"
+        ExterCond:
+          type: "string"
+          format: "string"
+          example: "TA"
+        Foundation:
+          type: "string"
+          format: "string"
+          example: "CBlock"
+        BsmtQual:
+          type: "string"
+          format: "string"
+          example: "TA"
+        BsmtCond:
+          type: "string"
+          format: "string"
+          example: "TA"
+        BsmtExposure:
+          type: "string"
+          format: "string"
+          example: "No"
+        BsmtFinType1:
+          type: "string"
+          format: "string"
+          example: "Rec"
+        BsmtFinSF1:
+          type: "number"
+          format: "float"
+          example: 468
+        BsmtFinType2:
+          type: "string"
+          format: "string"
+          example: "LwQ"
+        BsmtFinSF2:
+          type: "number"
+          format: "float"
+          example: 144.0
+        BsmtUnfSF:
+          type: "number"
+          format: "float"
+          example: 270.0
+        TotalBsmtSF:
+          type: "number"
+          format: "float"
+          example: 882.0
+        Heating:
+          type: "string"
+          format: "string"
+          example: "GasA"
+        HeatingQC:
+          type: "string"
+          format: "string"
+          example: "TA"
+        CentralAir:
+          type: "string"
+          format: "string"
+          example: "Y"
+        Electrical:
+          type: "string"
+          format: "string"
+          example: "SBrkr"
+        1stFlrSF:
+          type: "number"
+          format: "integer"
+          example: 896
+        2ndFlrSF:
+          type: "number"
+          format: "integer"
+          example: 0
+        LowQualFinSF:
+          type: "number"
+          format: "integer"
+          example: 0
+        GrLivArea:
+          type: "number"
+          format: "integer"
+          example: 898
+        BsmtFullBath:
+          type: "number"
+          format: "float"
+          example: 0.0
+        BsmtHalfBath:
+          type: "number"
+          format: "float"
+          example: 0.0
+        FullBath:
+          type: "number"
+          format: "integer"
+          example: 1
+        HalfBath:
+          type: "number"
+          format: "integer"
+          example: 0
+        BedroomAbvGr:
+          type: "number"
+          format: "integer"
+          example: 2
+        KitchenAbvGr:
+          type: "number"
+          format: "integer"
+          example: 1
+        KitchenQual:
+          type: "string"
+          format: "string"
+          example: "TA"
+        TotRmsAbvGrd:
+          type: "number"
+          format: "integer"
+          example: 5
+        Functional:
+          type: "string"
+          format: "string"
+          example: "Typ"
+        Fireplaces:
+          type: "number"
+          format: "integer"
+          example: 0
+        FireplaceQu:
+          type: "string"
+          format: "string"
+          example: "Fa"
+        GarageType:
+          type: "string"
+          format: "string"
+          example: "Attchd"
+        GarageYrBlt:
+          type: "number"
+          format: "float"
+          example: 1961.0
+        GarageFinish:
+          type: "string"
+          format: "string"
+          example: "Unf"
+        GarageCars:
+          type: "number"
+          format: "float"
+          example: 1.0
+        GarageArea:
+          type: "number"
+          format: "float"
+          example: 730.0
+        GarageQual:
+          type: "string"
+          format: "string"
+          example: "TA"
+        GarageCond:
+          type: "string"
+          format: "string"
+          example: "TA"
+        PavedDrive:
+          type: "string"
+          format: "string"
+          example: "Y"
+        WoodDeckSF:
+          type: "number"
+          format: "integer"
+          example: 140
+        OpenPorchSF:
+          type: "number"
+          format: "integer"
+          example: 0
+        EnclosedPorch:
+          type: "number"
+          format: "integer"
+          example: 0
+        3SsnPorch:
+          type: "number"
+          format: "integer"
+          example: 0
+        ScreenPorch:
+          type: "number"
+          format: "integer"
+          example: 120
+        PoolArea:
+          type: "number"
+          format: "integer"
+          example: 0
+        PoolQC:
+          type: "string"
+          format: "string"
+          example: "Ex"
+        Fence:
+          type: "string"
+          format: "string"
+          example: "MnPrv"
+        MiscFeature:
+          type: "string"
+          format: "string"
+          example: "Shed"
+        MiscVal:
+          type: "number"
+          format: "integer"
+          example: 0
+        MoSold:
+          type: "number"
+          format: "integer"
+          example: 6
+        YrSold:
+          type: "number"
+          format: "integer"
+          example: 2010
+        SaleType:
+          type: "string"
+          format: "string"
+          example: "WD"
+        SaleCondition:
+          type: "string"
+          format: "string"
+          example: "Normal"
+        
+responses:
+  200:
+    description: "Output prediction generated"
+  401:
+    description: "Fatal internal exception (check log output)"
